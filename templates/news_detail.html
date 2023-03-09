@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <h3>{{ object.title }}</h3>
+        <img class="img-fluid" src="{{ object.image.url }}" alt="">
+        <p style="word-wrap:break-word;">{{ object.long_descriptions }}</p>
+        <p>{{ object.created_at|date:'d.m.Y H:i' }} {{ object.category }}</p>
+    </div>
+{% endblock %}
